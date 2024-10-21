@@ -92,7 +92,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
             lifecycleScope.launch {
                 viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                     viewModel.objectsState.collect { itemsInApiResponse ->
-                        if (itemsInApiResponse == LoginResponse(keypass = "fitness")) {
+                        if (itemsInApiResponse == LoginResponse(keypass = "fashion")) {
                             navc?.navigate(R.id.action_loginFragment_to_dashboardFragment)
                         } else {
                             view?.findViewById<TextView>(R.id.loginErrorTextView)?.setText("Failed to connect to API")

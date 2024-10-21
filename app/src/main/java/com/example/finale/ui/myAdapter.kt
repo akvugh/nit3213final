@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finale.R
 
 class myAdapter(private var dataList: List<String> = listOf(),private val clicklambdafunction: () -> Unit) : RecyclerView.Adapter<viewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
