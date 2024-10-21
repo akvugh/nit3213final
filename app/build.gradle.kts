@@ -68,6 +68,7 @@ dependencies {
     androidTestImplementation(libs.mockk.android) // Android- specific MockK for instrumented tests
     androidTestImplementation(libs.mockk.agent) // MockK agent for advanced mocking in instrumented tests
     androidTestImplementation(libs.androidx.junit.v113) // AndroidX JUnit for instrumented tests
+    testImplementation(libs.kotlinx.coroutines.test)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
