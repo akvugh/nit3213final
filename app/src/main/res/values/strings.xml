@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Finale</string>
+    <string name="usrName">Username</string>
+    <string name="usrPassword">Password</string>
+    <string name="login">Login</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="details">Details</string>
 </resources>
