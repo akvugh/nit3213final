@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class DashboardFragment : Fragment() {
 
-    @OptIn(DelicateCoroutinesApi::class)
+    // @OptIn(DelicateCoroutinesApi::class)
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: myAdapter
