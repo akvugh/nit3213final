@@ -46,24 +46,28 @@ android {
 
 dependencies {
     //Add required dependencies
+    implementation(libs.material)
     implementation(libs.hilt.android)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
     kapt(libs.hilt.android.compiler)
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
     implementation(libs.moshi.kotlin)
     implementation(libs.logging.interceptor)
-    implementation(libs.material)
-
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui)
     // Local unit test dependencies (run on the JVM)
     testImplementation(libs.mockk) // Core MockK library for local unit tests
     testImplementation(libs.mockk.android) // Android-specific MockK for local unit tests
     testImplementation(libs.mockk.agent) // MockK agent for advanced mocking (e.g., static methods)
-    testImplementation(libs.junit) // JUnit for local unit test
-    // Instrumented test dependencies (run on an Android device or emulator)
+    testImplementation(libs.junit) // JUnit for local unit tests
+// Instrumented test dependencies (run on an Android device or emulator)
     androidTestImplementation(libs.mockk.android) // Android- specific MockK for instrumented tests
     androidTestImplementation(libs.mockk.agent) // MockK agent for advanced mocking in instrumented tests
     androidTestImplementation(libs.androidx.junit.v113) // AndroidX JUnit for instrumented tests
-
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
