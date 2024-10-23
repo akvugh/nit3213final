@@ -52,6 +52,11 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.junit.ktx)
+    implementation(libs.androidx.fragment.testing)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.junit)
+    testImplementation(libs.hilt.android.testing)
     kapt(libs.hilt.android.compiler)
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
@@ -60,6 +65,9 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui)
     // Local unit test dependencies (run on the JVM)
+    androidTestImplementation (libs.hilt.android.testing)
+    testImplementation (libs.mockito.core)
+    testImplementation (libs.mockito.inline) // For inline mocking
     testImplementation(libs.mockk) // Core MockK library for local unit tests
     testImplementation(libs.mockk.android) // Android-specific MockK for local unit tests
     testImplementation(libs.mockk.agent) // MockK agent for advanced mocking (e.g., static methods)

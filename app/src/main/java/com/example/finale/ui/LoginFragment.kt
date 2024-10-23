@@ -30,7 +30,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
     private var navc: NavController?= null
 
     // Comparing the inputted username and password with the correct username and password
-    fun checkCredentials(usernameinput:String,
+    fun checkLoginInfo(usernameinput:String,
                          passwordinput:String,
                          correctUsername:String,
                          correctPassword:String) : Boolean {
@@ -87,7 +87,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
         var passwordinput = view?.findViewById<TextView>(R.id.password_input)?.getText().toString()
 
         // Checking the credentials
-        if (checkCredentials(usernameinput, passwordinput, usernameCorrect, passwordCorrect)) {
+        if (checkLoginInfo(usernameinput, passwordinput, usernameCorrect, passwordCorrect)) {
             Log.v("s4679530", "Correct Credentials Entered")
             lifecycleScope.launch {
                 viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -107,7 +107,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
                     "Current Entered Username is: $usernameinput \n" +
                     "Current Entered Password is: $passwordinput"
             )
-            // Getting the reason for the error when logging in and setting the loginErrorMessage to the error
+            // To display login error if needed
             var loginErrorMessage = loginErrorReason(usernameinput, passwordinput, usernameCorrect, passwordCorrect)
             view?.findViewById<TextView>(R.id.loginErrorTextView)?.setText(loginErrorMessage)
 
