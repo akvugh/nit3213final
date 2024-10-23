@@ -1,4 +1,4 @@
-package com.example.finale
+package com.example.finale.network
 
 import dagger.Module
 import dagger.Provides

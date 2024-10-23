@@ -1,7 +1,5 @@
-package com.example.finale
+package com.example.finale.network
 
-import com.example.finale.network.ApiRetrieve
-import com.example.finale.network.RetrofitClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

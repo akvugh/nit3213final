@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.annotation.Nullable
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -45,9 +46,8 @@ class LoginFragment : Fragment(), View.OnClickListener {
                          correctUsername:String,
                          correctPassword:String) : String {
         return when {
-            usernameinput != correctUsername && passwordinput != correctPassword -> "Both username and password are incorrect"
-            passwordinput != correctPassword -> "Password is incorrect"
-            usernameinput != correctUsername -> "Username is incorrect"
+            usernameinput == "" || passwordinput == "" -> "Enter valid information"
+            usernameinput != correctUsername && passwordinput != correctPassword -> "Either username or password is incorrect"
             else -> "Unknown Error"
         }
     }
